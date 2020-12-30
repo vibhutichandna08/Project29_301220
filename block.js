@@ -12,10 +12,16 @@ class Block{
       World.add(world, this.body);
     }
     display(){
-      var pos = this.body.pos;
+      var pos = this.body.position;
+      var angle = this.body.angle;
       push();
-      translate(this.body.position.x, this.body.position.y);
+      translate(pos.x, pos.y);
       rotate(angle);
+      rectMode(CENTER);
+      strokeWeight(2);
+      stroke(217, 82, 4);
+      fill(242, 135, 5);
+      rect(0, 0, this.width, this.height);
       pop();
     }
 }
